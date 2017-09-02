@@ -10,9 +10,8 @@ class HomePageTest(TestCase):
 
         self.assertTemplateUsed(response, 'home.html')
 
-class NewListTest(TestCase):
 
-   
+class NewListTest(TestCase):
 
     def test_can_save_a_POST_request(self):
         response = self.client.post('/lists/new', data={'item_text': 'A new list item'})
@@ -24,8 +23,6 @@ class NewListTest(TestCase):
     def test_redirects_after_POST(self):
         response = self.client.post('/lists/new', data={'item_text': 'A new list item'})
         self.assertRedirects(response, '/lists/the-only-list-in-the-world/')
-
-        
 
 
 class ListViewTest(TestCase):
@@ -39,7 +36,7 @@ class ListViewTest(TestCase):
 
         response = self.client.get('/lists/the-only-list-in-the-world/')
 
-        self.assertContains(response,'itemey 1')
+        self.assertContains(response, 'itemey 1')
         self.assertContains(response, 'itemey 2')
 
 
@@ -60,5 +57,3 @@ class ItemModelTest(TestCase):
         second_saved_item = saved_items[1]
         self.assertEqual(first_saved_item.text, 'The first (ever) list item')
         self.assertEqual(second_saved_item.text, 'Item the second')
-
-    
