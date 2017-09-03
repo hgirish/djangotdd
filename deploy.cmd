@@ -126,6 +126,8 @@ D:\home\python354x86\python.exe -m pip install --upgrade -r requirements.txt
 IF !ERRORLEVEL! NEQ 0 goto error
 
 REM Add additional package installation here
+D:\home\python354x86\python.exe manage.py collectstatic --noinput 
+D:\home\python354x86\python.exe manage.py migrate  --noinput 
 REM -- Example --
 REM env\scripts\easy_install pytz
 REM IF !ERRORLEVEL! NEQ 0 goto error
