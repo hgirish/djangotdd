@@ -120,9 +120,9 @@ REM )
 
 :: 4. Install packages
 echo Pip install requirements.
-echo D:\home\Python35\python.exe -m pip install --upgrade -r requirements.txt
+echo D:\home\python354x86\python.exe -m pip install --upgrade -r requirements.txt
 REM env\scripts\pip install -r requirements.txt
-D:\home\Python35\python.exe -m pip install --upgrade -r requirements.txt
+D:\home\python354x86\python.exe -m pip install --upgrade -r requirements.txt
 IF !ERRORLEVEL! NEQ 0 goto error
 
 REM Add additional package installation here
