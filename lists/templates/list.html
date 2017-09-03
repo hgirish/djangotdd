@@ -1,9 +1,9 @@
 {% extends "base.html" %} {% block header_text %} Your To-Do list {% endblock header_text %} {% block form_action %} /lists/{{list.id}}/add_item
 {% endblock form_action %} {% block table %}
-<table id="id_list_table">
+<table id="id_list_table" class="table table-responsible table-condense">
     {% for item in list.item_set.all %}
     <tr>
-        <td>{{ forloop.counter }}: {{item.text}}</td>
+        <td class="input-lg">{{ forloop.counter }}: {{item.text}}</td>
     </tr>
     {% endfor %}
 </table>
