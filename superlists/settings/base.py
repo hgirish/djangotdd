@@ -26,7 +26,7 @@ SECRET_KEY = 'rfw$s!@_oz2yz_&mq*y9v#@kd$q9_2vm4o5-*g_=2x#5$4zng)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','superlist-staging.azurewebsites.net']
+ALLOWED_HOSTS = []
 
 
 # Application definition
