@@ -122,3 +122,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT =  os.path.abspath(os.path.join(BASE_DIR, '../static'))
 print("BASE_DIR: {}".format(BASE_DIR))
+print('STATIC_ROOT: {}'.format(STATIC_ROOT))
