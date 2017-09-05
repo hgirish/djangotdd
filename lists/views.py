@@ -19,7 +19,7 @@ def view_list(request, list_id):
 
             return redirect(list_)
 
-    return render(request, 'list.html', {'list': list_,  "form": form})
+    return render(request, 'list.html', {'list': list_, "form": form})
 
 
 def new_list(request):
