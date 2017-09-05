@@ -17,6 +17,7 @@ else:
     def to_str(value):
         return value.encode(sys.getfilesystemencoding())
 
+
 def log(txt):
     """Logs fatal errors to a log file if WSGI_LOG env var is defined"""
     log_file = os.environ.get('WSGI_LOG')
@@ -26,6 +27,7 @@ def log(txt):
             f.write('%s: %s' % (datetime.datetime.now(), txt))
         finally:
             f.close()
+
 
 def get_wsgi_handler(handler_name):
     if not handler_name:
@@ -63,9 +65,11 @@ def get_wsgi_handler(handler_name):
 
     return handler
 
+
 activate_this = os.getenv('WSGI_ALT_VIRTUALENV_ACTIVATE_THIS')
 if not activate_this:
     raise Exception('WSGI_ALT_VIRTUALENV_ACTIVATE_THIS is not set')
+
 
 def get_virtualenv_handler():
     log('Activating virtualenv with %s\n' % activate_this)
@@ -75,6 +79,7 @@ def get_virtualenv_handler():
     handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
     log('Got handler: %r\n' % handler)
     return handler
+
 
 def get_venv_handler():
     log('Activating venv with executable at %s\n' % activate_this)

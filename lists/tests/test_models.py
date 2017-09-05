@@ -3,9 +3,6 @@ from lists.models import Item, List
 from django.core.exceptions import ValidationError
 
 
-
-
-
 class ListAndItemModelsTest(TestCase):
     def test_saving_and_retrieving_items(self):
         list_ = List()
@@ -33,6 +30,7 @@ class ListAndItemModelsTest(TestCase):
         self.assertEqual(first_saved_item.list, list_)
         self.assertEqual(second_saved_item.text, 'Item the second')
         self.assertEqual(second_saved_item.list, list_)
+
     def test_can_not_save_empty_list_itmes(self):
         list_ = List.objects.create()
         item = Item(list=list_, text='')
