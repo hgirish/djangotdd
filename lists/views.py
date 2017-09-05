@@ -27,7 +27,7 @@ def new_list(request):
     if form.is_valid():
 
         list_ = List.objects.create()
-        Item.objects.create(text=request.POST['text'], list=list_)
+        form.save(for_list=list_)
         return redirect(list_)
     else:
 
