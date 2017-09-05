@@ -55,7 +55,8 @@ except NameError as ex:
                 secret.close()
             except IOError:
                 Exception(
-                    'Please create a %s file with random characters     to generate your secret key!' % SECRET_FILE)
+                    'Please create a %s file with random characters     to generate your secret key!' %
+                    SECRET_FILE)
 #print('SECRET_KEY: {}'.format(SECRET_KEY))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
