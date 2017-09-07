@@ -159,3 +159,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../static'))
 
 AUTH_USER_MODEL = 'accounts.User'
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = 'c:\\temp\mailbox' # change this to a proper location
