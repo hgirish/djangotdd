@@ -13,7 +13,7 @@ def view_list(request, list_id):
     form = ExistingListItemForm(for_list=list_)
 
     if request.method == 'POST':
-        form = ExistingListItemForm(for_list=list_,data=request.POST)
+        form = ExistingListItemForm(for_list=list_, data=request.POST)
         if form.is_valid():
             form.save()
 

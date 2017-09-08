@@ -163,4 +163,4 @@ AUTHENTICATION_BACKENDS = [
     'accounts.authentication.PasswordlessAuthenticationBackend',
 ]
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = 'c:\\temp\mailbox' # change this to a proper location
+EMAIL_FILE_PATH = 'c:\\temp\mailbox'  # change this to a proper location
